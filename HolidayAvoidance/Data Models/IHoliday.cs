@@ -1,11 +1,15 @@
 ﻿
+using MongoDB.Bson;
+
 namespace HolidayAvoidance
 {
     public interface IHoliday
     {
-        string ID { get; set; }
+        ObjectId ID { get; set; }
         HolidayAvoidanceAction AvoidanceAction { get; set; }
-        DateTime Date { get; set; }
+        DateTimeOffset Date { get; set; }
         string? Description { get; set; }
+
+        public int AvoidanceActionID { get; set; }
     }
 }

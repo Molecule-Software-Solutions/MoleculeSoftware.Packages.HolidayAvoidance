@@ -1,14 +1,16 @@
-﻿using MongoDB.Bson;
-using Realms; 
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using HolidayAvoidance;
+using MongoDB.Bson;
 
-namespace HolidayAvoidance
+namespace Testing
 {
-    public class Holiday : RealmObject, IHoliday
+    internal class HolidayCustom : IHoliday
     {
-        [PrimaryKey]
         public ObjectId ID { get; set; } = ObjectId.GenerateNewId(); 
-        public DateTimeOffset Date { get; set; }
-        public string? Description { get; set; }
         public HolidayAvoidanceAction AvoidanceAction
         {
             get => (HolidayAvoidanceAction)AvoidanceActionID; 
@@ -17,6 +19,8 @@ namespace HolidayAvoidance
                 AvoidanceActionID = (int)value; 
             }
         }
+        public DateTimeOffset Date { get; set; }
+        public string? Description { get; set; }
 
         public int AvoidanceActionID { get; set; }
     }

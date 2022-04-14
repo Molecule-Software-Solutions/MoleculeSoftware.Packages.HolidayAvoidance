@@ -10,7 +10,13 @@
         /// <param name="databaseName">Name of the database to access</param>
         public void AddHoliday(IHoliday holiday, Action? addHolidayCallback = null, string databaseName = "holidaydb.realm")
         {
-            var resultHoliday = (Holiday)holiday; 
+            var resultHoliday = new Holiday()
+            {
+                ID = holiday.ID,
+                AvoidanceAction = holiday.AvoidanceAction,
+                Date = holiday.Date,
+                Description = holiday.Description
+            };
             var realm = DataController.GetNewDBRealm(databaseName);
             realm.Write(() =>
             {
