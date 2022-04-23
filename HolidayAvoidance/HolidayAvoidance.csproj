@@ -4,6 +4,18 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>MoleculeSoftware.Package.HolidayAvoidance</PackageId>
+    <Version>1.0.0-beta1</Version>
+    <Authors>Joshua H. Santiago, Matthew J. Bracey</Authors>
+    <Company>Molecule Software Systems, </Company>
+    <Product>Holiday Avoidance System</Product>
+    <Description>A simple project which allows the user to store holiday or exclusion dates, perform date calculations (addint and subtracting dates), and determining how to best handle a calculation that falls on a holiday or exclusion date. (Move forward or back to avoid a holiday, provide an alert, or throw an exception). </Description>
+    <Copyright>2022 Molecule Software Systems</Copyright>
+    <RepositoryUrl>https://github.com/joshman1019/MoleculeSoftware.Packages.HolidayAvoidance</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Holiday; avoidance; calculation; date; exclusion; exclude</PackageTags>
+    <PackageReleaseNotes>This is a beta release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
